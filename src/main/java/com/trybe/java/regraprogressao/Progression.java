@@ -9,12 +9,13 @@ import java.util.Scanner;
 public class Progression {
   int qtdActivities;
   ArrayList<Integer> weight = new ArrayList<>();
+  ArrayList<Integer> grades = new ArrayList<>();
   ArrayList<String> activities = new ArrayList<>();
 
   /**
    * Register activities.
    */
-  public void registerActivities () {
+  public void registerActivities() {
     Scanner scanner = new Scanner(System.in);
     int count = 1;
 
@@ -27,6 +28,9 @@ public class Progression {
 
       System.out.println("Digite o peso da atividade " + count + ":");
       weight.add(Integer.parseInt(scanner.nextLine()));
+
+      System.out.println("Digite a nota obtida para " + activities.get(count - 1) + ":");
+      grades.add(Integer.parseInt(scanner.nextLine()));
 
       qtdActivities -= 1;
       count += 1;
