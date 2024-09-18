@@ -34,7 +34,13 @@ public class Progression {
 
       qtdActivities -= 1;
       count += 1;
-    } while (qtdActivities > 0);
+    } while(qtdActivities > 0);
+
+    int soma = weight.stream().reduce(0, Integer::sum);
+
+    if (soma != 100) {
+      System.out.println("A soma dos pesos é diferente de 100!");
+    }
 
     scanner.close();
   }
